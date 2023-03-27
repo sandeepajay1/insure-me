@@ -25,7 +25,7 @@
       dest: /home/ubuntu/insure_selenium1.jar
       owner: ubuntu
       group: ubuntu
-      mode: u=rw,g=r,o=r
+      mode: u=rwx,g=r,o=r
       
   - name : run selenium jar
     command : java -jar /home/ubuntu/insure_selenium1.jar
