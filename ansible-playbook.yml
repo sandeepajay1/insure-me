@@ -22,12 +22,12 @@
   - name: Copy file with owner and permission, using symbolic representation
     ansible.builtin.copy:
       src: ./insure_selenium.jar
-      dest: /home/ubuntu/insure_selenium.jar
+      dest: /home/ubuntu/insure_selenium1.jar
       owner: ubuntu
       group: ubuntu
       mode: u=rw,g=r,o=r
       
   - name : run selenium jar
-    command : java -jar /home/ubuntu/insure_selenium.jar
+    command : java -jar /home/ubuntu/insure_selenium1.jar
     become : yes
     become_user : ubuntu
