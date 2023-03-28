@@ -3,14 +3,14 @@
   become: true
   connection: local
   tasks:
-    - name: Copy file with owner and permission, using symbolic representation
-      copy:
-        src: ./insure_selenium.jar
-        dest: /home/ubuntu/insure_selenium.jar
-        owner: root
-        group: root
-        mode: u=rwx,g=r,o=r
+ #   - name: Copy file with owner and permission, using symbolic representation
+ #     copy:
+ #       src: ./insure_selenium.jar
+ #       dest: /home/ubuntu/insure_selenium.jar
+ #       owner: root
+ #       group: root
+ #       mode: u=rwx,g=r,o=r
     - name: run selenium jar
-      command: java -jar /home/ubuntu/insure_selenium.jar
+      command: java -jar ./insure_selenium.jar
       become: yes
       become_user: root
