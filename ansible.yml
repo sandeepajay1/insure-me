@@ -1,9 +1,7 @@
   - name : Selenium
     hosts : host
     become: true
-    connection : local
     tasks : 
-  
       - name: Copy file with owner and permission, using symbolic representation
         copy:
           src: ./insure_selenium.jar
