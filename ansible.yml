@@ -7,10 +7,10 @@
       copy:
         src: ./insure_selenium.jar
         dest: /home/ubuntu/insure_selenium.jar
-        owner: jenkins
-        group: jenkins
+        owner: root
+        group: root
         mode: u=rwx,g=r,o=r
     - name: run selenium jar
       command: java -jar /home/ubuntu/insure_selenium.jar
       become: yes
-      become_user: jenkins
+      become_user: root
